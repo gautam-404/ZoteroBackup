@@ -1,6 +1,6 @@
 # Zotero Git Backup (for macOS)
 
-This setup automates Zotero backups using Git and `launchctl` on macOS. GitHub imposes a **5GB** repository soft limit, with a **100MB file size limit** per file. Additionally, performance may degrade if more than **1,000 files** are modified in a single commit.
+This setup automates Zotero backups using Git and `launchctl` on macOS. GitHub imposes a **5GB** repository soft limit, with a **100MB file size limit** per file. Performance may degrade if more than **1,000 files** are modified in a single commit.
 
 ---
 
