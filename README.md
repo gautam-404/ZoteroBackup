@@ -14,8 +14,6 @@ cd ~/Zotero
 git init
 ```
 
----
-
 ### 2. Clone this repository
 Clone the backup script repository to a location of your choice.
 
@@ -23,8 +21,6 @@ Clone the backup script repository to a location of your choice.
 git clone https://github.com/anujgautam/ZoteroBackup.git
 cd ZoteroBackup
 ```
-
----
 
 ### 3. Copy the backup script into the Zotero directory
 Move the backup script to your Zotero directory and make it executable.
@@ -34,15 +30,12 @@ cp backup.sh ~/Zotero/
 chmod +x ~/Zotero/backup.sh
 ```
 
----
-
 ### 4. Copy the launch agent file
 Move the `.plist` file into macOS's `LaunchAgents` directory.
 
 ```bash
 cp com.user.zoteroBackup.plist ~/Library/LaunchAgents/
 ```
----
 
 ### 5. Load the launch agent
 Register the backup script with `launchctl` so it runs automatically.
@@ -52,8 +45,6 @@ launchctl load ~/Library/LaunchAgents/com.user.zoteroBackup.plist
 ```
 
 At this point, your Zotero backup should run every 3 hours automatically.
-
----
 
 ### 6. Running the backup manually
 If you need to **trigger a backup manually**, use:
@@ -70,7 +61,7 @@ launchctl start com.user.zoteroBackup
 
 ---
 
-### 7. Stopping and unloading the backup
+## Stopping and unloading the backup
 To **stop the backup process**, run:
 
 ```bash
