@@ -8,7 +8,7 @@
         <key>ProgramArguments</key>
         <array>
             <string>/bin/sh</string>
-            <string>~/Zotero/backup.sh</string>
+            <string>/Users/USERNAME/Zotero/backup.sh</string>
         </array>
 
         <!-- Runs at 11:30 PM -->
@@ -25,10 +25,10 @@
         <integer>10800</integer>
 
         <key>StandardOutPath</key>
-        <string>~/Zotero/zotero_backup.log</string>
+        <string>/Users/USERNAME/Zotero/zotero_backup.log</string>
         
         <key>StandardErrorPath</key>
-        <string>~/Zotero/zotero_backup_error.log</string>
+        <string>/Users/USERNAME/Zotero/zotero_backup_error.log</string>
 
         <key>RunAtLoad</key>
         <true/>

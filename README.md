@@ -30,12 +30,27 @@ cp backup.sh ~/Zotero/
 chmod +x ~/Zotero/backup.sh
 ```
 
-### 4. Copy the launch agent file
+### 4. Copy and edit the launch agent file
 Move the `.plist` file into macOS's `LaunchAgents` directory.
 
 ```bash
 cp com.user.zoteroBackup.plist ~/Library/LaunchAgents/
 ```
+
+Edit the `.plist` file to set the correct path for your Zotero directory. Open it with a text editor:
+
+```bash
+nano ~/Library/LaunchAgents/com.user.zoteroBackup.plist
+```
+Find the line with `ProgramArguments` and replace the path with your Zotero directory:
+
+```xml
+<key>ProgramArguments</key>
+<array>
+    <string>/Users/USERNAME/Zotero/backup.sh</string>
+</array>
+```
+Make sure to replace `USERNAME` with your actual username.
 
 ### 5. Load the launch agent
 Register the backup script with `launchctl` so it runs automatically.
@@ -46,7 +61,7 @@ launchctl load ~/Library/LaunchAgents/com.user.zoteroBackup.plist
 
 At this point, your Zotero backup should run every 3 hours automatically.
 
-### 6. Running the backup manually
+### 6. Running the backup
 If you need to **trigger a backup manually**, use:
 
 ```bash
