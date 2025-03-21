@@ -47,10 +47,10 @@ Find the line with `ProgramArguments` and replace the path with your Zotero dire
 ```xml
 <key>ProgramArguments</key>
 <array>
-    <string>/Users/USERNAME/Zotero/backup.sh</string>
+    <string>/Users/USERNAME/Zotero/ZoteroBackup.sh</string>
 </array>
 ```
-Make sure to replace `USERNAME` with your actual username.
+Replace `USERNAME` with your actual username, in all places it occurs in the `.plist` file.
 
 ### 5. Load the launch agent
 Register the backup script with `launchctl` so it runs automatically.
